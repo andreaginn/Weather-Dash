@@ -3,7 +3,6 @@
 <head>
 <title>Weather Dash</title>
 <link rel="stylesheet" href="assets/style.css">
-<meta name="description" content="Our first page">
 </head>
 <body>
 <div class="container-fluid">
@@ -17,20 +16,39 @@
         <div class="col-3" id="search-result">
             <div class="row">
                 <div class="col-12">
-                    <h5>Search for a City:</h5>
+                    <h4>Search for a City:</h4>
                 </div>
             </div>
         <div class="row">
             <div class="col-12">
                 <div class="input-group">
-                    <input class="form-control" type="text" id="enterCity"
-                    placeholder="ex: Seattle"><button type="button" id="searchBtn"
-                    class="btn btn-primary"><i class="fas fa-search"></i></button>
+                    <input class="form-control" type="text" id="enter-city"
+                    placeholder="ex: Seattle"><button type="button" id="search-btn"
+                    class="btn btn-primary">Search</button>
                 </div>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <ul id="past-searches">
+                </ul>
+            </div>
+        </div>
 
+        <div id="weather-info" class="col-12">
+            <div class="row">
+                <div id="chosen-city" class="col-9">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h3>5 Day Forecast:</h3>
+                </div>
+            </div>
+
+        </div>
 
 
         </div>
