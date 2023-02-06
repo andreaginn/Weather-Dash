@@ -1,7 +1,18 @@
 * {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+   
 }
 
-h1 {
+h1 {}
 
+.navbar {
+    background-color: rgb(220, 238, 107);
+}
+
+.fiveday {
+    background-color: rgb(96, 201, 250);
+}
+
+#search-result {
+    background-color: rgb(238, 168, 233);
 }

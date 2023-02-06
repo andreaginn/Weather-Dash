@@ -17,7 +17,7 @@
 function getWeather() {
     const apiKey = "c0e11bdb32749d04b1da3814d11f85ea";
     const city = document.getElementById("enter-city");
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}";
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}";
 
 
     fetch(apiUrl)
