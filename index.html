@@ -1,71 +1,55 @@
 <!doctype html>
 <html>
+
 <head>
-<title>Weather Dash</title>
-<link rel="stylesheet" href="assets/style.css">
+    <title>Weather Dash</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-<div class="container-fluid">
-    <div class="row navbar">
-        <div class="col-12 text-center">
-            <h1>Weather Dashboard</h1>
+    <div class="container-fluid">
+        <div class="row navbar">
+            <div class="col-12 text-center">
+                <h1>Weather Dashboard</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3" id="search-result">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Search for a City:</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <input class="form-control" type="text" id="enter-city" placeholder="ex: Seattle"><button
+                                type="button" id="search-btn" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="past-searches">
+                        </ul>
+                    </div>
+                </div>
+                <div id="weather-info" class="col-12">
+                    <div class="row">
+                        <div id="chosen-city" class="col-9">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>5 Day Forecast:</h3>
+                        </div>
+                    </div>
+                    <div id="five-day"></div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-3" id="search-result">
-            <div class="row">
-                <div class="col-12">
-                    <h4>Search for a City:</h4>
-                </div>
-            </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="input-group">
-                    <input class="form-control" type="text" id="enter-city"
-                    placeholder="ex: Seattle"><button type="button" id="search-btn"
-                    class="btn btn-primary">Search</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <ul id="past-searches">
-                </ul>
-            </div>
-        </div>
-
-        <div id="weather-info" class="col-12">
-            <div class="row">
-                <div id="chosen-city" class="col-9">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h3>5 Day Forecast:</h3>
-                </div>
-            </div>
-
-        </div>
-
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>
