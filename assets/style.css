@@ -11,6 +11,7 @@ h1 {}
 
 .fiveday {
     background-color: rgb(96, 201, 250);
+    height: 500px;
 }
 
 #search-result {

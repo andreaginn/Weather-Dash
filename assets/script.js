@@ -17,13 +17,46 @@
 function getWeather() {
     const apiKey = "c0e11bdb32749d04b1da3814d11f85ea";
     const city = document.getElementById("enter-city");
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}";
-
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=imperial`;
+    console.log(city.value)
 
     fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector(".temp").textContent = data.main.temp + " F"
+            document.querySelector(".wind").textContent = data.wind.speed
+            document.querySelector(".humidity").textContent = data.main.humidity
+            console.log(data)
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${apiKey}&units=imperial`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    document.querySelector(".humidity0").textContent = data.list[1].main.humidity
+                    document.querySelector(".wind0").textContent = data.list[1].wind.speed
+                    document.querySelector(".temp0").textContent = data.list[1].main.temp
 
+                    document.querySelector(".humidity1").textContent = data.list[9].main.humidity
+                    document.querySelector(".wind1").textContent = data.list[9].wind.speed
+                    document.querySelector(".temp1").textContent = data.list[9].main.temp
+
+                    document.querySelector(".humidity2").textContent = data.list[17].main.humidity
+                    document.querySelector(".wind2").textContent = data.list[17].wind.speed
+                    document.querySelector(".temp2").textContent = data.list[17].main.temp
+
+                    document.querySelector(".humidity3").textContent = data.list[25].main.humidity
+                    document.querySelector(".wind3").textContent = data.list[25].wind.speed
+                    document.querySelector(".temp3").textContent = data.list[25].main.temp
+
+                    document.querySelector(".humidity4").textContent = data.list[33].main.humidity
+                    document.querySelector(".wind4").textContent = data.list[33].wind.speed
+                    document.querySelector(".temp4").textContent = data.list[33].main.temp
+                })
+        })
+    let btn = document.createElement("button")
+    btn.textContent = city.value
+    document.querySelector("#search-result").appendChild(btn)
 
 
 }
 
-document.getElementById("search-btn").addEventListener("click", getWeather());
+document.getElementById("search-btn").addEventListener("click", getWeather);
