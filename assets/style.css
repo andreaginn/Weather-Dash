@@ -1,19 +1,31 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-   
+
 }
 
 h1 {}
 
 .navbar {
-    background-color: rgb(220, 238, 107);
+    background-color: rgb(47, 47, 48);
+    color:  rgb(161, 217, 243);
 }
 
 .fiveday {
-    background-color: rgb(96, 201, 250);
+    background-color: rgb(161, 217, 243);
     height: 500px;
 }
 
 #search-result {
-    background-color: rgb(238, 168, 233);
+    background-color: rgb(100, 98, 100);
+    color:rgb(188, 247, 219)
+}
+
+.card {
+    background-color: rgb(188, 247, 219);
+    border-radius: 15%;
+    padding: 10px;
+}
+
+#weather-info {
+    background-color: rgb(188, 247, 219);
 }

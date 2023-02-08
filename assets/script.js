@@ -23,33 +23,33 @@ function getWeather() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            document.querySelector(".temp").textContent = data.main.temp + " F"
-            document.querySelector(".wind").textContent = data.wind.speed
-            document.querySelector(".humidity").textContent = data.main.humidity
+            document.querySelector(".temp").textContent = "Temp: " + data.main.temp + " degrees"
+            document.querySelector(".wind").textContent = "Wind speed: " + data.wind.speed + " mph"
+            document.querySelector(".humidity").textContent = "Humidity: " + data.main.humidity + "%"
             console.log(data)
             fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${apiKey}&units=imperial`)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)
-                    document.querySelector(".humidity0").textContent = data.list[1].main.humidity
-                    document.querySelector(".wind0").textContent = data.list[1].wind.speed
-                    document.querySelector(".temp0").textContent = data.list[1].main.temp
+                    document.querySelector(".humidity0").textContent = "Humidity: " + data.list[1].main.humidity + "%"
+                    document.querySelector(".wind0").textContent = "Wind speed: " + data.list[1].wind.speed + " mph"
+                    document.querySelector(".temp0").textContent = "Temp: " + data.list[1].main.temp + " degrees"
 
-                    document.querySelector(".humidity1").textContent = data.list[9].main.humidity
-                    document.querySelector(".wind1").textContent = data.list[9].wind.speed
-                    document.querySelector(".temp1").textContent = data.list[9].main.temp
+                    document.querySelector(".humidity1").textContent = "Humidity: " + data.list[9].main.humidity + "%"
+                    document.querySelector(".wind1").textContent = "Wind speed: " + data.list[9].wind.speed + " mph"
+                    document.querySelector(".temp1").textContent = "Temp: " + data.list[9].main.temp + " degrees"
 
-                    document.querySelector(".humidity2").textContent = data.list[17].main.humidity
-                    document.querySelector(".wind2").textContent = data.list[17].wind.speed
-                    document.querySelector(".temp2").textContent = data.list[17].main.temp
+                    document.querySelector(".humidity2").textContent = "Humidity: " + data.list[17].main.humidity + "%"
+                    document.querySelector(".wind2").textContent = "Wind speed: " + data.list[17].wind.speed + " mph"
+                    document.querySelector(".temp2").textContent = "Temp: " + data.list[17].main.temp + " degrees"
 
-                    document.querySelector(".humidity3").textContent = data.list[25].main.humidity
-                    document.querySelector(".wind3").textContent = data.list[25].wind.speed
-                    document.querySelector(".temp3").textContent = data.list[25].main.temp
+                    document.querySelector(".humidity3").textContent = "Humidity: " + data.list[25].main.humidity + "%"
+                    document.querySelector(".wind3").textContent = "Wind speed: " + data.list[25].wind.speed + " mph"
+                    document.querySelector(".temp3").textContent = "Temp: " + data.list[25].main.temp + " degrees"
 
-                    document.querySelector(".humidity4").textContent = data.list[33].main.humidity
-                    document.querySelector(".wind4").textContent = data.list[33].wind.speed
-                    document.querySelector(".temp4").textContent = data.list[33].main.temp
+                    document.querySelector(".humidity4").textContent = "Humidity: " + data.list[33].main.humidity + "%"
+                    document.querySelector(".wind4").textContent = "Wind speed: " + data.list[33].wind.speed + " mph"
+                    document.querySelector(".temp4").textContent = "Temp: " + data.list[33].main.temp + " degrees"
                 })
         })
     let btn = document.createElement("button")
