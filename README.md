@@ -12,6 +12,6 @@ This site uses the OpenWeather API to retrieve current weather details, and also
 
 ## Installation
 
-Site deployed. URL: 
+Site deployed. URL: https://andreaginn.github.io/Weather-Dash/
 
-![my image](.jpg)
+![dash screenshot](weatherdashscreenshot.jpg)
